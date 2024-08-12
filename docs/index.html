@@ -1312,33 +1312,6 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/additional.js"></script>
-  
-  <script>
-    // Function to generate a simple math CAPTCHA
-    function generateCaptcha() {
-      const num1 = Math.floor(Math.random() * 10);
-      const num2 = Math.floor(Math.random() * 10);
-      const operator = Math.random() > 0.5 ? "+" : "-";
-      const captchaOperation = `${num1} ${operator} ${num2}`;
-      document.getElementById('captchaOperation').innerText = captchaOperation;
-      return eval(captchaOperation); // Calculate the result
-    }
-  
-    // Function to validate the CAPTCHA
-    function validateCaptcha() {
-      const userAnswer = parseInt(document.getElementById('captchaInput').value);
-      if (userAnswer !== window.captchaResult) {
-        alert("Incorrect CAPTCHA. Please try again.");
-        return false; // Prevent form submission
-      }
-      return true; // Allow form submission
-    }
-  
-    // Initialize CAPTCHA on page load
-    window.onload = function() {
-      window.captchaResult = generateCaptcha();
-    };
-  </script>
 
 </body>
 
